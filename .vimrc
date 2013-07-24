@@ -20,4 +20,6 @@ set history=200
 
 " Basic Key mapping - moving around
 inoremap jj <Esc>
+nnoremap <space> 10j
+nnoremap :s :wa
 
