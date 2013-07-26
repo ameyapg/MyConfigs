@@ -23,7 +23,8 @@ set history=200
 
 " Basic Key mapping - moving around
 inoremap jj <Esc>
-nnoremap <space> 10j
+nnoremap j<space> 10j
+nnoremap k<space> 10k
 nnoremap :s :wa
 
 " Entries for the Syntastic plugin
