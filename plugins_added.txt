@@ -1,3 +1,5 @@
 1. Pathogen ( Plugin manager )
 2. Syntastic ( Syntax checker )
+3. NERDTREE ( File browser - best plugin ever)
+
 
