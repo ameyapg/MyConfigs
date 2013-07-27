@@ -11,6 +11,8 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 set autoindent
+set ignorecase
+set pastetoggle=<F2>
 " show number
 set number
 " syntax
@@ -25,7 +27,7 @@ set history=200
 inoremap jj <Esc>
 nnoremap j<space> 10j
 nnoremap k<space> 10k
-nnoremap :s :wa
+nnoremap ; :
 
 " Entries for the Syntastic plugin
 " On by default, turn it off for html
@@ -38,3 +40,18 @@ let g:syntastic_cpp_compiler_options = ' -std=c++11'
 
 " Entries for the NERDTree Plugin
 " NERDTree is fucking awesome
+
+" Entries for enabling recursive search up the directory for the exhuberant tags
+" Not added as yet
+
+" Change the default leader
+let mapleader=","
+
+nnoremap <leader>s :wa<CR>
+
+" Quickly editing and sourcing the .vimrc
+nnoremap <leader>eim :vsplit $MYVIMRC<cr>
+nnoremap <leader>sim :source $MYVIMRC<cr>
+
+" Automcommand list
+au FocusLost * :wa
