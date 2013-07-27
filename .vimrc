@@ -23,7 +23,8 @@ set history=200
 
 " Basic Key mapping - moving around
 inoremap jj <Esc>
-nnoremap <space> 10j
+nnoremap j<space> 10j
+nnoremap k<space> 10k
 nnoremap :s :wa
 
 " Entries for the Syntastic plugin
@@ -33,4 +34,7 @@ let g:syntastic_mode_map = { 'mode': 'active',
         \ 'passive_filetypes': ['html'] }
 
 let g:syntastic_python_checkers=['pyflakes']
+let g:syntastic_cpp_compiler_options = ' -std=c++11'
 
+" Entries for the NERDTree Plugin
+" NERDTree is fucking awesome
