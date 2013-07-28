@@ -6,6 +6,7 @@ execute pathogen#infect()
 set nocompatible
 filetype off
 " setup indent, tab, etc.
+set nohlsearch
 set smartindent
 set tabstop=4
 set shiftwidth=4
@@ -32,16 +33,32 @@ nnoremap ; :
 
 " Entries for the Syntastic plugin
 " On by default, turn it off for html
+
+let g:syntastic_check_on_open=1
+
 let g:syntastic_mode_map = { 'mode': 'active',
-    \ 'active_filetypes': [],
+    \ 'active_filetypes': ['cpp','python'],
         \ 'passive_filetypes': ['html'] }
 
 let g:syntastic_python_checkers=['pyflakes']
 let g:syntastic_cpp_compiler_options = ' -std=c++11'
 
+let g:syntastic_cpp_check_header = 1
+let g:syntastic_cpp_auto_refresh_includes = 1
+let g:syntastic_enable_highlighting = 1
+
+
+
+
+
+
+
+
+
 " Entries for the NERDTree Plugin
 " NERDTree is fucking awesome
-nnoremap <leader>nt :NERDTree .<cr>
+ nnoremap <leader>t :NERDTree .<cr>
+
 
 " Entries for enabling recursive search up the directory for the exhuberant tags
 " Not added as yet
@@ -50,7 +67,6 @@ nnoremap <leader>nt :NERDTree .<cr>
 let mapleader=","
 
 nnoremap <leader>s :wa<CR>
-
 " Quickly editing and sourcing the .vimrc
 nnoremap <leader>eim :vsplit $MYVIMRC<cr>
 nnoremap <leader>sim :source $MYVIMRC<cr>
