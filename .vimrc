@@ -13,6 +13,7 @@ set expandtab
 set autoindent
 set ignorecase
 set pastetoggle=<F2>
+set hidden
 " show number
 set number
 " syntax
@@ -40,6 +41,7 @@ let g:syntastic_cpp_compiler_options = ' -std=c++11'
 
 " Entries for the NERDTree Plugin
 " NERDTree is fucking awesome
+nnoremap <leader>nt :NERDTree .<cr>
 
 " Entries for enabling recursive search up the directory for the exhuberant tags
 " Not added as yet
@@ -55,3 +57,8 @@ nnoremap <leader>sim :source $MYVIMRC<cr>
 
 " Automcommand list
 au FocusLost * :wa
+
+" Folding stuff
+
+
+
