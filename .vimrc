@@ -50,15 +50,14 @@ let g:syntastic_enable_highlighting = 1
 
 
 
-
-
-
-
-
 " Entries for the NERDTree Plugin
 " NERDTree is fucking awesome
- nnoremap <leader>t :NERDTree .<cr>
 
+let env='play'
+
+if env=='play'
+    nnoremap <leader>t :NERDTree .<cr>
+endif
 
 " Entries for enabling recursive search up the directory for the exhuberant tags
 " Not added as yet

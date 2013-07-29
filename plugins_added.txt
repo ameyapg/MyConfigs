@@ -1,6 +1,6 @@
 1. Pathogen ( Plugin manager )
 2. Syntastic ( Syntax checker ) -- Just stopped working for some reason..was could have been really helpful otherwise
-3. NERDTREE ( File browser - best plugin ever)
+3. NERDTREE ( File browser - best plugin ever)(since it does not work well at 'work', enable keymaps only for 'play')
 4. Omnicppcomplete ( Needs Ctags database....need to find a good way to generate that over a large database)
-
+5. Also added the stl.vim plugin for better C++ syntax highlighting
 
