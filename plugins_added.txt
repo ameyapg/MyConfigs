@@ -4,3 +4,5 @@
 4. Omnicppcomplete ( Needs Ctags database....need to find a good way to generate that over a large database)
 5. Also added the stl.vim plugin for better C++ syntax highlighting
 6. Just added the Clam.vim plugin.... seems really useful..need to team it up with the sblocate command or perhaps something else too
+7. Added the javascript.vim plugin from company's plugins
+8. Added snipmate.vim for code completion stuff

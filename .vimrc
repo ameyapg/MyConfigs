@@ -30,6 +30,9 @@ inoremap jj <Esc>
 nnoremap j<space> 10j
 nnoremap k<space> 10k
 nnoremap ; :
+" Extra entries for navigation in Insert mode
+inoremap <C-l> <Right>
+inoremap <C-k> <Up>
 
 " Entries for the Syntastic plugin
 " On by default, turn it off for html
