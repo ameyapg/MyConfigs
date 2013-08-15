@@ -3,6 +3,9 @@
 " Adding the entry for Pathogen
 execute pathogen#infect()
 
+"Adding entries for runtimepath
+set runtimepath^=~/.vim/bundle/ctrlp.vim
+
 set nocompatible
 filetype off
 " setup indent, tab, etc.
@@ -14,7 +17,8 @@ set expandtab
 set autoindent
 set ignorecase
 set pastetoggle=<F2>
-set hidden
+set formatoptions-=cro
+" set hidden
 " show number
 set number
 " syntax
@@ -33,6 +37,9 @@ nnoremap ; :
 " Extra entries for navigation in Insert mode
 inoremap <C-l> <Right>
 inoremap <C-k> <Up>
+
+"Mapping for CtrlP plugin
+nnoremap <leader>p :CtrlP .<Cr>
 
 " Entries for the Syntastic plugin
 " On by default, turn it off for html
@@ -74,9 +81,13 @@ nnoremap <leader>eim :vsplit $MYVIMRC<cr>
 nnoremap <leader>sim :source $MYVIMRC<cr>
 
 " Automcommand list
-au FocusLost * :wa
+" au FocusLost * :wa
 
 " Folding stuff
+
+" entry for Ctrlp plugin
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
 
 
 
