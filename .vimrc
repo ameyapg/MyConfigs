@@ -90,5 +90,6 @@ let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_max_files = 0
 let g:ctrlp_max_depth = 100
-
+let g:ctrlp_working_path_mode = 'ra'
+let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:1000,results:1000000'
 
