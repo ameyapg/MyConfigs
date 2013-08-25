@@ -18,6 +18,7 @@ set autoindent
 set ignorecase
 set pastetoggle=<F2>
 set formatoptions-=cro
+set title
 " set hidden
 " show number
 set number
@@ -74,6 +75,8 @@ endif
 
 " Change the default leader
 let mapleader=","
+
+nnoremap <leader>nh :nohls<CR>
 
 nnoremap <leader>s :wa<CR>
 " Quickly editing and sourcing the .vimrc
