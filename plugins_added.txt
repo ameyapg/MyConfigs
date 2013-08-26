@@ -6,3 +6,5 @@
 6. Just added the Clam.vim plugin.... seems really useful..need to team it up with the sblocate command or perhaps something else too
 7. Added the javascript.vim plugin from company's plugins
 8. Added snipmate.vim for code completion stuff
+9. Added MiniBufExplorer for better buffer management
+10. Added EasyMotion for arbitrary jumps 

@@ -97,3 +97,5 @@ let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:100,results:10'
 let g:ctrlp_use_caching = 1
 
+" Entry for MBE Plugin
+nnoremap <leader>mb :MBEToggle<cr>
