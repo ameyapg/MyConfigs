@@ -19,6 +19,8 @@ set ignorecase
 set pastetoggle=<F2>
 set formatoptions-=cro
 set title
+set autochdir
+set wildmenu
 " set hidden
 " show number
 set number
@@ -26,7 +28,7 @@ set number
 syntax enable
 syntax on
 set hls
-
+set autoread
 " set history size
 set history=200
 
@@ -99,3 +101,6 @@ let g:ctrlp_use_caching = 1
 
 " Entry for MBE Plugin
 nnoremap <leader>mb :MBEToggle<cr>
+
+" Entry for Netrw plugin
+let g:netrw_liststyle=3
