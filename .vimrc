@@ -41,6 +41,12 @@ nnoremap ; :
 inoremap <C-l> <Right>
 inoremap <C-k> <Up>
 
+" Entries for visual mode
+" commenting blocks C++
+vnoremap <F5> :s/^/\/\/<CR>
+
+
+
 "Mapping for CtrlP plugin
 nnoremap <leader>p :CtrlP .<Cr>
 
@@ -74,6 +80,8 @@ endif
 
 " Entries for enabling recursive search up the directory for the exhuberant tags
 " Not added as yet
+
+set tags=./tags,tags;$HOME
 
 " Change the default leader
 let mapleader=","
