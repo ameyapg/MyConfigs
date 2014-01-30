@@ -124,3 +124,8 @@ nnoremap <leader>mb :MBEToggle<cr>
 
 " Entry for Netrw plugin
 let g:netrw_liststyle=3
+
+" Vimux Mappings
+nnoremap <leader>vp :VimuxPromptCommand<CR>
+nnoremap  <leader>vl :VimuxRunLastCommand<CR>
+nnoremap <leader>vq :VimuxCloseRunner<CR>
