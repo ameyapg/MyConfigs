@@ -1,0 +1,83 @@
+# -*-shell-script-*-
+
+# For information and guidelines on what should and should NOT go
+# in here, please read sbsetupunix help:
+#   http://wiki/SBTools#sbsetupunix
+# In particular pay attention to the 'Typical Mistakes' that can cause
+# significant pain to the company.
+# You should also time your changes as explained in sbsetupunix help.
+
+# Uncomment the following to disable setmwe. See man nosetmwe
+
+# Environment variables
+
+# Customize DEFAULT_SANDBOX to where you normally work
+setenv SHELL /usr/local/bin/tcsh 
+
+setenv DEFAULT_SANDBOX /mathworks/devel/sandbox/$USER/ 
+
+setenv history 10000
+
+setenv EDITOR vim
+# setenv SBDIFF3_EDITOR vim
+setenv VISUAL vim
+
+setenv P4CONFIG .perforce
+
+# Adding the bin path for ctags
+setenv /mathworks/devel/sandbox/agangamw/bin:$PATH
+# Adding the path for TMUX
+setenv /mathworks/home/agangamw/Downloads/tmux-1.8:$PATH
+# Adding the PATH for the jvm and the jre
+setenv PATH /mathworks/home/agangamw/Downloads/jdk1.7.0_40/jre/bin:$PATH
+setenv PATH /mathworks/home/agangamw/Downloads/jdk1.7.0_40/bin:$PATH
+setenv PATH /mathworks/home/agangamw/Downloads/idea-IU-129.713/bin:$PATH
+setenv PATH /public/Rich_McKeever/pg/glnxa64:$PATH
+setenv PATH /mathworks/home/agangamw/Downloads/cling-Ubuntu-10.04-64bit-fc98551c43/bin:$PATH 
+setenv PATH /mathworks/home/agangamw/Downloads/node-v0.10.24-linux-x64/bin:$PATH
+source /mathworks/hub/share/sbtools/cshrc_setup.sh
+#alias setmwe 'man nosetmwe'
+
+#aliases 
+alias sbnd sb -nodesktop
+alias gchrome /usr/bin/google-chrome
+alias me cd /sandbox/$USER 
+alias notes cd ~/Notes
+alias jsunit cd matlab/test/toolbox/simulink/simulink/sdi/jsunit
+alias nodeapi cd matlab/toolbox/shared/simulation_data_repository/src/simulation_data_repository
+alias nodefiles cd matlab/toolbox/stm/stm/src/stm/Repository
+alias nodepkg cd matlab/derived/glnxa64/testbin/toolbox/stm/stm/src/stm/ 
+alias sdiprequal sbm /sandbox/dnegandh/sdi_hmi_prequalify.sh
+
+#aliases for C++ projects
+alias sdr cd matlab/toolbox/shared/simulation_data_repository
+alias sdrpkg cd matlab/derived/glnxa64/testbin/toolbox/shared/simulation_data_repository/src/simulation_data_repository
+alias sdrerr cd matlab/resources/simulation_data_repository/en
+
+#aliases for building C++ modules
+alias mkdnt sbmake -log  -distcc DEBUG=1 NORUNTESTS=1 build 
+alias mkrnt sbmake -log  -distcc RELEASE=1 NORUNTESTS=1 build  
+
+alias mkdrt sbmake -log-append -j12 DEBUG=1 build 
+alias mkrrt sbmake -log-append -j12 RELEASE=1 build 
+
+#Alias for sdi
+alias sdi cd matlab/toolbox/shared/sdi
+#Alias for testhmi
+alias testhmi cd matlab/test/toolbox/simulink/hmi
+#Alias for HMI
+alias hmi cd matlab/toolbox/simulink/hmi
+alias hmipkg cd matlab/derived/glnxa64/testbin/toolbox/simulink/hmi/sl_hmi/
+alias testhmisvg cd matlab/test/toolbox/simulink/hmi/prototype/hmi/matlab/toolbox/matlab/hmicomponents/web/js/MW/visualcomponents/widgetview/hmicomponents/svg
+alias hmisvg cd matlab/toolbox/matlab/hmicomponents/web/js/MW/visualcomponents/widgetview/hmicomponents/svg
+# Aliases for sbtools
+alias sbrt sbruntests -autofarm devel -testsuites sdi
+alias mperfect mw -using  Bslinst matlab
+alias vnc vncserver -geometry 1400x800
+# Alias for Exhuberant Ctags
+alias ectags /mathworks/home/agangamw/ctags-5.8/ctags
+
+# Alias for IntelliJ
+alias idea idea.sh
+# Adding the CGDB interface 
+setenv PATH /mathworks/home/agangamw/Downloads/cgdb-0.6.7/cgdb:$PATH
