@@ -129,3 +129,19 @@ let g:netrw_liststyle=3
 nnoremap <leader>vp :VimuxPromptCommand<CR>
 nnoremap  <leader>vl :VimuxRunLastCommand<CR>
 nnoremap <leader>vq :VimuxCloseRunner<CR>
+
+" Mappings for MyPlugin.vim
+"which uses Vimux.vim
+
+nnoremap <leader>cf :call TakeUserInput()<CR>
+
+
+" Jshint for js inside HTML
+nnoremap <leader>js :Clam jshint --extract=auto %<CR>
+" Jshint using clam for .js files
+nnoremap <leader>jh :Clam jshint %<CR>
+
+" Bracket completion mappings
+inoremap ( ()<left>
+inoremap [ []<left>
+inoremap { {}<left>
